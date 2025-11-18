@@ -1,15 +1,18 @@
 <template>
-  <div class="header bg-white shadow-sm">
+  <div class="header bg-bg1 shadow-sm">
     <div class="header__content flex justify-between items-center py-4 px-8 xl:px-20 gap-x-16">
       <div class="header__logo-container flex items-center gap-x-4">
         <img class="header__logo-img w-[50px]" src="../../assets/main-photo.png" alt="">
-        <span class="header__logo-text uppercase text-lg font-bold tracking-wide">Parvinder Bankra</span>    
+        <div class="flex flex-col leading-none">
+          <span class="header__logo-text uppercase text-lg font-bold tracking-wide text-textMain">Parvinder Bankra</span>    
+          <span>Frontend Developer</span>
+        </div>
       </div>            
 
       <nav class="hidden md:flex">
         <ul class="flex justify-between gap-8">
           <li v-for="item in Menu" :key="item.name"> 
-            <a class="font-bold uppercase tracking-wide text-sm" :href="item.href" >
+            <a class="font-bold uppercase tracking-wide text-textBody text-sm" :href="item.href" >
               {{ item.name }}
             </a>
           </li>

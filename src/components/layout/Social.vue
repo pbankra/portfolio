@@ -1,5 +1,5 @@
 <template> 
-  <div class="home-hero__socials absolute top-1/2 -translate-y-1/2 p-2 bg-white flex flex-col gap-y-4">
+  <div class="home-hero__socials absolute top-1/2 -translate-y-1/2 p-2 bg-bgCard flex flex-col gap-y-4">
         <div class="home-hero__social w-[48px]">
           <a class="home-hero__social-icon-link block w-full" href="https://www.linkedin.com/in/parvinder-b-94b312bb/" rel="noreferrer" target="_blank">
             <img class="home-hero__social-icon rounded-lg" src="../../assets/linkedin.png" alt="Parvinder Bankra Linkedin Profile">

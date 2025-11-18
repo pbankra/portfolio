@@ -3,7 +3,6 @@
     <Hero></Hero>
 </template>
 <script setup>
-import Hero from './Hero.vue'
-import Navbar from './Navbar.vue';
-
+    import Navbar from './Navbar.vue';
+    import Hero from './Hero.vue'
 </script>
