@@ -1,5 +1,5 @@
 <template>
-    <section class="home-hero min-h-[80rem] max-h-[120rem] h-100vh bg-bg2">
+    <section class="home-hero h-screen bg-bg2">
         <Social></Social>
         <HeroContent></HeroContent>
     </section>

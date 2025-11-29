@@ -5,7 +5,8 @@ export default {
 		extend: {
 			colors: {
 				bg1: "#FFFFFF",
-				bg2: "#F8FAFC",
+				bg2: "#F1F5F9",
+				bg3: "#F8FAFC",
 				bgCard: "#F1F5F9",
 		
 				textMain: "#1E293B",

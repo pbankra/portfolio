@@ -1,8 +1,8 @@
 <template>
-  <div class="header bg-bg1 shadow-sm">
+  <div class="header bg-bg1 shadow-sm fixed w-full z-50">
     <div class="header__content flex justify-between items-center py-4 px-8 xl:px-20 gap-x-16">
       <div class="header__logo-container flex items-center gap-x-4">
-        <img class="header__logo-img w-[50px]" src="../../assets/main-photo.png" alt="">
+        <img class="header__logo-img w-[50px]" src="../../../assets/main-photo.png" alt="">
         <div class="flex flex-col leading-none">
           <span class="header__logo-text uppercase text-lg font-bold tracking-wide text-textMain">Parvinder Bankra</span>    
           <span>Frontend Developer</span>
@@ -68,82 +68,50 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 
 /* language switch styling */
 .switch > span {
-  position: absolute;
-  top: 9px;
-  pointer-events: none;
-  font-family: 'Helvetica', Arial, sans-serif;
-  font-weight: bold;
-  font-size: 12px;
-  text-transform: uppercase;
+  @apply absolute top-2 pointer-events-none font-bold text-xs uppercase w-1/2 text-center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
-  width: 50%;
-  text-align: center;
 }
 
 input.check-toggle-round-flat:checked ~ .off {
-  color: #10b981;
+  @apply text-accent;
 }
 
 input.check-toggle-round-flat:checked ~ .on {
-  color: #fff;
+  @apply text-white;
 }
 
 .switch > span.on {
-  left: 0;
-  padding-left: 2px;
-  color: #10b981;
+  @apply left-0 pl-0.5 text-accent;
 }
 
 .switch > span.off {
-  right: 0;
-  padding-right: 4px;
-  color: #fff;
+  @apply right-0 pr-1 text-white;
 }
 
 .check-toggle + label {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  outline: none;
+  @apply block cursor-pointer outline-none relative;
   user-select: none;
 }
 
 input.check-toggle-round-flat + label {
-  padding: 2px;
-  width: 97px;
-  height: 35px;
-  background-color: #10b981;
-  border-radius: 60px;
+  @apply bg-accent p-0.5 w-24 h-9 rounded-full;
 }
 input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
-  display: block;
-  position: absolute;
-  content: "";
+  @apply block content-[""] absolute;
 }
 
 input.check-toggle-round-flat + label:before {
-  top: 2px;
-  left: 2px;
-  bottom: 2px;
-  right: 2px;
-  background-color: #10b981;
-  border-radius: 60px;
+  @apply bg-accent top-1 left-1 bottom-1 right-1 rounded-full;
 }
 input.check-toggle-round-flat + label:after {
-  top: 4px;
-  left: 4px;
-  bottom: 4px;
-  width: 48px;
-  background-color: #fff;
-  border-radius: 52px;
-  transition: margin 0.2s;
+  @apply top-1 left-1 bottom-1 w-12 bg-white rounded-3xl transition-all;
 }
 
 input.check-toggle-round-flat:checked + label:after {
-  margin-left: 44px;
+  @apply ml-11;
 }
 </style>
