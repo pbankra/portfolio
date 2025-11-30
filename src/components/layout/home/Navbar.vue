@@ -53,7 +53,7 @@
 </template>
 <script setup>
   import {ref} from 'vue'
-  const isMenuOpen = ref(false)
+  let isMenuOpen = ref(false)
   const Menu = ref([
     {name:'Home',href:'#home'},
     {name:'About Me',href:'#about-me'},
