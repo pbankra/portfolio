@@ -57,7 +57,7 @@
   const Menu = ref([
     {name:'Home',href:'#home'},
     {name:'About Me',href:'#about-me'},
-    {name:'Work',href:'#work'},
+    {name:'Experience',href:'#experience'},
     {name:'Contact',href:'#contact'},
     /* {name:'Blog',href:'#blog'} */
   ])

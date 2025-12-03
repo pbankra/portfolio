@@ -1,0 +1,13 @@
+/* Import custom styles */
+@use './styles/variables';
+@use './styles/base';
+@use './styles/components';
+@use './styles/utilities';
+@use './styles/layout';
+
+/* Import Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+

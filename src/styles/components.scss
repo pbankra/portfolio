@@ -1,0 +1,52 @@
+/* Reusable component styles */
+@use './variables' as *;
+
+/* Sections styles */
+
+
+/* Button styles */
+.btn {
+  @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  
+  &-primary {
+    @extend .btn;
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+  
+  &-secondary {
+    @extend .btn;
+    @apply bg-gray-600 text-white hover:bg-gray-700;
+  }
+  
+  &-outline {
+    @extend .btn;
+    @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white;
+  }
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-md p-6 transition-shadow duration-300;
+  
+  &:hover {
+    @apply shadow-lg;
+  }
+}
+
+/* Section styles */
+.section {
+  @apply py-16 px-4;
+  
+  &-title {
+    @apply text-4xl font-bold text-center mb-12;
+  }
+  
+  &-subtitle {
+    @apply text-xl text-gray-600 text-center mb-8;
+  }
+}
+
+/* Container styles */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4;
+}
