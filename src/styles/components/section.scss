@@ -1,5 +1,5 @@
 .section {
   &__heading {
-    @apply uppercase text-4xl text-center mb-9 after:content-[''] after:block after:w-24 after:h-1 after:bg-accent after:mx-auto after:mt-4;
+    @apply uppercase text-4xl text-center mb-9 /* after:content-[''] after:block after:w-24 after:h-1 after:bg-accent after:mx-auto after:mt-4 */;
   }
 }

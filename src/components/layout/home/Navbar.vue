@@ -19,16 +19,16 @@
         </ul>
       </nav>
 
-      <div class="hidden lg:flex items-center gap-x-4">
+<!--       <div class="hidden lg:flex items-center gap-x-4">
         <div class="switch relative">
           <input id="language-toggle" class="check-toggle check-toggle-round-flat absolute invisible" type="checkbox">
           <label for="language-toggle"></label>
           <span class="on">DE</span>
           <span class="off">EN</span>
         </div>
-        <!-- <Icon icon="bi:brightness-high-fill" width="32" height="32" /> -->
-         <Icon icon="bi:brightness-high" width="16" height="16" />
-      </div>
+        <Icon icon="bi:brightness-high-fill" width="32" height="32" />
+        <Icon icon="bi:brightness-high" width="16" height="16" />
+      </div> -->
 
       <div class="md:hidden" @click="isMenuOpen = !isMenuOpen">
         <span v-if="isMenuOpen">

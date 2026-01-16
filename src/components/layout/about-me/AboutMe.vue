@@ -3,6 +3,7 @@
     <div class="about-me__header px-20">
       <div>
         <h2 class="section__heading">About me</h2>
+        <div class="animated-bar"></div>
         <p></p>
       </div>
       <div class="flex gap-20"> 
@@ -34,3 +35,29 @@
   </section> 
 </template>
 <script></script>
+<style scoped lang="scss">
+.animated-bar {
+    height: 4px;
+    width: 75px;
+    content: "";
+    right: 0;
+    left: 0;
+    margin: auto;
+    position: relative;
+    @apply bg-accent;
+  
+    ::before {
+        left: 8px;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-name: barAnimation;
+        animation-timing-function: linear;
+        background-color: rgb(16, 16, 16);
+        content: "";
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        width: 4px;
+    }
+}
+</style>
