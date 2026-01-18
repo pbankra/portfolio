@@ -1,9 +1,5 @@
 /* Import custom styles */
-@use './styles/variables';
-@use './styles/base';
-@use './styles/components';
-@use './styles/utilities';
-@use './styles/layout';
+@use './styles/base/base';
 @use './styles/components/section';
 
 /* Import Tailwind directives */

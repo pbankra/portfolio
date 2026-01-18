@@ -1,15 +1,15 @@
 <template>
-  <section id="about-me" class="section h-screen pt-40">
-    <div class="about-me__header px-20">
+  <section id="about-me" class="section h-screen pt-40 px-4">
+    <div class="about-me__header">
       <div>
-        <h2 class="section__heading">About me</h2>
-        <div class="animated-bar"></div>
+        <h2 class="section__heading pb-4 px-0 border-b-4 border-accent font-bold text-4xl w-fit mx-auto mb-20">About me</h2>
+        <!-- <div class="animated-bar"></div> -->
         <p></p>
       </div>
-      <div class="flex gap-20"> 
-        <img class="rounded-lg shadow-md max-w-sm" src="../../../assets/about-me.jpg" alt="About me photo" />
+      <div class="flex flex-col lg:flex-row"> 
+        <img class="rounded-full border-8 border-accent ld:rounded-lg shadow-md max-w-sm mx-auto mb-8" src="../../../assets/about-me.jpg" alt="About me photo" />
         <div class="">
-          <h3>heading</h3>    
+          <h3 class="text-2xl font-bold mb-4">Frontend Developer, Coesfeld</h3>    
           <p>I’m a Frontend Web Developer with over four years of experience building responsive, user-focused interfaces. I enjoy turning ideas into clean, efficient code and continuously improving my skills to grow into a strong, future-ready frontend engineer.
             Currently, I’m focusing on Vue.js, Tailwind CSS, and strengthening my JavaScript fundamentals.
           </p>

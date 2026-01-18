@@ -1,4 +1,4 @@
 <template>
-    <section class="section bg-accent h-[500px]" id="footer">
+    <section class="footer bg-accent h-[500px]" id="footer">
     </section>
 </template>
