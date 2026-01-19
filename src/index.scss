@@ -1,6 +1,8 @@
 /* Import custom styles */
 @use './styles/base/base';
 @use './styles/components/section';
+@use './styles/components/header';
+@use './styles/components/footer';
 
 /* Import Tailwind directives */
 @tailwind base;

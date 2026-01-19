@@ -1,0 +1,32 @@
+.header {
+	@apply fixed w-full z-50 py-4 px-4 sm:px-8 xl:px-20;
+  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out, backdrop-filter 0.3s ease-out;
+
+&__logo-head {
+		@apply uppercase text-base sm:text-lg font-bold tracking-wide text-white leading-none sm:leading-none;
+	}
+
+&__logo-subhead {
+		@apply text-sm text-white;
+	}
+
+    .navbar {
+			&__link {
+				@apply text-white font-bold uppercase tracking-wide text-sm md:hover:border-b-2 md:hover:border-accent;
+				transition: color 0.3s ease-out;
+			}
+    }
+
+  &__on-scroll {
+    @apply bg-bg1 shadow-md;
+
+    .navbar__link, 
+		.header__logo-subhead {
+        @apply text-textBody;
+     }
+		 
+		.header__logo-head {
+				@apply text-textMain;
+		}
+  }
+}

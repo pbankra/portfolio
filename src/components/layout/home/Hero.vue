@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-    import Social from './Social.vue';
+    /* import Social from './Social.vue'; */
     import HeroContent from './HeroContent.vue'
 </script>
 

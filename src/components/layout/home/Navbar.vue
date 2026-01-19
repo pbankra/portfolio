@@ -1,18 +1,19 @@
 <template>
-  <div ref="headerRef" class="header bg-bg1 shadow-sm fixed w-full z-50 py-4 px-4 sm:px-8 xl:px-20">
-    <div class="header__content flex justify-between items-center gap-x-16 sm:max-w-[640px] md:max-w-[860px] lg:max-w-[1200px] mx-auto">
+  <div ref="headerRef" class="header"
+      :class="[{ 'header__on-scroll': isScrolled }]">
+    <div class="header__content flex justify-between items-center gap-x-16 sm:max-w-[640px] md:max-w-[860px] lg:max-w-[1000px] xl:max-w-[1200px] mx-auto">
       <div class="header__logo-container flex items-center gap-x-2.5 sm:gap-x-4">
         <img class="header__logo-img w-[50px]" src="../../../assets/main-photo.png" alt="">
         <div class="flex flex-col leading-none gap-y-1.5">
-          <span class="header__logo-text uppercase text-base sm:text-lg font-bold tracking-wide text-textMain leading-none sm:leading-none">Parvinder Bankra</span>    
-          <span>Frontend Developer</span>
+          <span class="header__logo-head">Parvinder Bankra</span>    
+          <span class="header__logo-subhead">Frontend Developer</span>
         </div>
       </div>            
 
-      <nav class="hidden md:flex">
+      <nav class=" navbar hidden md:flex">
         <ul class="flex justify-between gap-8">
           <li v-for="item in Menu" :key="item.name"> 
-            <a class="font-bold uppercase tracking-wide text-textBody text-sm hover:border-b-2 hover:border-accent" :href="item.href" >
+            <a class="navbar__link" :href="item.href" >
               {{ item.name }}
             </a>
           </li>
@@ -40,10 +41,10 @@
       </div>      
     </div> 
 
-    <nav class="lg:hidden py-4 px-8 lg:px-20" v-show="isMenuOpen">
+    <nav class="navbar lg:hidden py-4 px-8 lg:px-20" v-show="isMenuOpen">
       <ul class="flex flex-col items-end w-full justify-around gap-4">
         <li class="py-4 border-t border-[#eee] w-full text-right" v-for="item in Menu" :key="item.name"> 
-          <a :href="item.href" @click.prevent="scrollToSection(item.href)">
+          <a class="navbar__link" :href="item.href" @click.prevent="scrollToSection(item.href)">
             {{ item.name }}
           </a>
         </li>
@@ -53,6 +54,7 @@
 </template>
 <script setup>
   import { ref, onMounted, onBeforeUnmount } from 'vue'
+    const isScrolled = ref(false)
   const headerRef = ref(null)
   const isMenuOpen = ref(false)
   const Menu = ref([
@@ -60,13 +62,14 @@
     {name:'About Me',href:'#about-me'},
     {name:'Experience',href:'#experience'},
     {name:'Contact',href:'#contact'},
-    /* {name:'Blog',href:'#blog'} */
   ])
   const toggleMenu = () => {
     isMenuOpen.value = !isMenuOpen.value
+    isScrolled.value = ((window.scrollY || window.pageYOffset) > 30) || isMenuOpen.value === true
   }
   const scrollToSection = (href) => {
     isMenuOpen.value = false;
+    isScrolled.value = ((window.scrollY || window.pageYOffset) > 30)
     const section = document.querySelector(href)
     if(section) section.scrollIntoView({ behavior: 'smooth' })
   }
@@ -77,15 +80,24 @@
     const el = headerRef.value
     if (el && !el.contains(e.target)) {
       isMenuOpen.value = false
+      isScrolled.value = ((window.scrollY || window.pageYOffset) > 30)
     }
   }
 
+    // Toggle header style when page is scrolled
+    const onScroll = () => {
+      isScrolled.value = ((window.scrollY || window.pageYOffset) > 30) || isMenuOpen.value === true
+    }
+
   onMounted(() => {
     document.addEventListener('click', onDocumentClick)
+      window.addEventListener('scroll', onScroll, { passive: true })
+      onScroll() // set initial state
   })
 
   onBeforeUnmount(() => {
     document.removeEventListener('click', onDocumentClick)
+      window.removeEventListener('scroll', onScroll)
   })
 </script>
 
