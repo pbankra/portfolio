@@ -10,7 +10,7 @@
         </div>
       </div>            
 
-      <nav class=" navbar hidden md:flex">
+      <nav class=" navbar hidden lg:flex">
         <ul class="flex justify-between gap-8">
           <li v-for="item in Menu" :key="item.name"> 
             <a class="navbar__link" :href="item.href" >
@@ -31,12 +31,12 @@
         <Icon icon="bi:brightness-high" width="16" height="16" />
       </div> -->
 
-      <div class="md:hidden" @click.stop="toggleMenu" aria-label="Toggle menu" role="button" :aria-expanded="isMenuOpen">
+      <div class="lg:hidden" @click.stop="toggleMenu" aria-label="Toggle menu" role="button" :aria-expanded="isMenuOpen">
         <span v-if="isMenuOpen">
           <Icon icon="material-symbols:close" width="24" height="24" />
         </span>
         <span v-else>
-          <Icon icon="material-symbols:menu-rounded" width="24" height="24" />
+          <Icon class="menu" icon="material-symbols:menu-rounded" width="24" height="24" />
         </span>          
       </div>      
     </div> 
@@ -60,6 +60,7 @@
   const Menu = ref([
     {name:'Home',href:'#home'},
     {name:'About Me',href:'#about-me'},
+    {name:'Skills',href:'#skills'},
     {name:'Experience',href:'#experience'},
     {name:'Contact',href:'#contact'},
   ])
@@ -71,7 +72,11 @@
     isMenuOpen.value = false;
     isScrolled.value = ((window.scrollY || window.pageYOffset) > 30)
     const section = document.querySelector(href)
-    if(section) section.scrollIntoView({ behavior: 'smooth' })
+    if (!section) return
+    const headerHeight = headerRef.value?.offsetHeight || 0
+    const gap = 8 // small offset so content isn't flush under header
+    const top = section.getBoundingClientRect().top + window.pageYOffset - headerHeight - gap
+    window.scrollTo({ top, behavior: 'smooth' })
   }
 
   // Close menu when clicking outside the header/menu area

@@ -1,6 +1,10 @@
-.section {
-  @apply sm:max-w-[640px] md:max-w-[860px] lg:max-w-[1000px] xl:max-w-[1200px] mx-auto my-16;
+.section { 
+  @apply py-24;
   &__heading {
     @apply uppercase text-4xl text-center mb-9 px-4 sm:px-8;
+  }
+
+  .container {
+    @apply sm:max-w-[640px] md:max-w-[860px] lg:max-w-[1000px] xl:max-w-[1200px] mx-auto px-4 sm:px-8 xl:px-20;
   }
 }

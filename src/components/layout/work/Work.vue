@@ -1,76 +1,136 @@
 <template>
-    <section id="experience" class="section">
-        <h2 class="section__heading">Experience</h2>
-        <div>
-    
-<h3>Frontend Developer — E-Commerce Product Company (2021 – Present)</h3>
+  <section id="experience" class="section py-28">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      <!-- Section header -->
+      <header class="text-center mb-12 md:mb-16">
+        <p class="text-sm font-medium text-slate-500 tracking-wide uppercase">
+          Professional journey and key contributions
+        </p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-bold text-slate-900">
+          Experience
+        </h2>
+      </header>
 
-<div><span>Tech:</span> HTML, CSS, JavaScript (Modular JS), Tailwind CSS, Event Delegation, API Integration</div>
+      <!-- Experience card -->
+      <div class="relative rounded-xl bg-white border border-slate-200/60 p-6 md:p-8">
+        <!-- Accent bar -->
+        <span
+          class="absolute left-0 top-8 h-10 w-1 rounded-full bg-accent"
+        ></span>
 
-<p>I joined the company in 2021 and first worked on the existing Shopware-based store, handling UI improvements, bug fixing, and daily frontend tasks.
-Since 2023, I’ve been part of the team building a completely new e-commerce platform from scratch using modern approaches.</p>
-
-<h4>Key Contributions</h4>
-<ol>
-<li>Shopware Store (2021–2023)</li>
-</ol>
-
-<ul>
-<li>Fixed UI bugs and layout issues</li>
-<li>Improved responsiveness and styling consistency</li>
-<li>Implemented small JS interactions and UI enhancements</li>
-<li>Collaborated with backend and design for daily updates</li>
-</ul>
-
-<ol start="2">
-<li>New Sylius-Based Platform (2023 – Present)</li>
-</ol>
-
-<h5>Category Listing + Product Boxes</h5>
-
-<ul>
-<li>Built dynamic product cards with discount badges</li>
-<li>Availability-based buttons (“Add to Cart”, “Not Available”)</li>
-</ul>
-
-<h5>Improved grid layouts and component scalability</h5>
-
-<h5>Advanced Filters System (Mobile + Desktop)</h5>
-<p>Designed and built the entire Filters UI independently</p>
-
-<p>Modular JS: checkbox logic, active filter tracking, deletion, range filters</p>
-
-<p>Async live product count using API</p>
-
-<p>Reusable filters used also on Search pages</p>
-
-<h5>Multi-Level Main Menu</h5>
-<p>Developed multi-level navigation behavior</p>
-
-<p>Event delegation for performance</p>
-
-<p>Desktop + mobile transitions, animations, and UX consistency</p>
-
-<h5>Other Components</h5>
-
-<p>Dropdowns, email validators, character counters</p>
-<p>Reusable helpers and UI utilities</p>
-
-<p>Responsive layout refinements across the site</p>
-
-<h5>Freelance E-Commerce Frontend Work</h5>
-
-<p>Tech: HTML, CSS, JavaScript</p>
-<p>Ongoing project (no dates displayed)</p>
-
-<p>Provided continuous improvements and bug fixes for an online shop, including:</p>
-
-<p>UI fixes and styling adjustments</p>
-
-<p>Responsive enhancements</p>
-<p>Minor feature additions in JavaScript</p>
-
-<p>Day-to-day maintenance and updates</p>
+        <!-- Role header -->
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold text-gray-900">
+            Frontend Developer — E-Commerce Product Company
+          </h3>
+          <p class="text-sm text-gray-500 mt-1">
+            2021 – Present
+          </p>
         </div>
-    </section>
+
+        <!-- Tech stack -->
+        <div class="mb-6">
+          <p class="text-sm text-gray-600">
+            <span class="font-medium text-gray-700">Tech:</span>
+            HTML, CSS, JavaScript (Modular JS), Tailwind CSS, Event Delegation, API Integration
+          </p>
+        </div>
+
+        <!-- Intro -->
+        <p class="text-gray-700 mb-8 max-w-3xl">
+          I joined the company in 2021, initially working on a Shopware-based store before becoming 
+          part of the team building a new e-commerce platform from scratch using modern frontend practices.
+        </p>
+
+        <!-- Key Contributions -->
+        <div class="space-y-10">
+          <!-- Shopware -->
+          <div>
+            <h4 class="text-lg font-medium text-gray-900 mb-3">
+              Shopware Store (2021 – 2023)
+            </h4>
+
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+              <li>Fixed UI bugs and layout issues</li>
+              <li>Improved responsiveness and styling consistency</li>
+              <li>Implemented small JavaScript interactions and UI enhancements</li>
+              <li>Collaborated closely with backend and design teams</li>
+            </ul>
+          </div>
+
+          <!-- Sylius -->
+          <div>
+            <h4 class="text-lg font-medium text-gray-900 mb-4">
+              New Sylius-Based Platform (2023 – Present)
+            </h4>
+
+            <!-- Subsection -->
+            <div class="mb-6">
+              <h5 class="font-medium text-gray-800 mb-2">
+                Category Listing & Product Boxes
+              </h5>
+              <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Built dynamic product cards with discount badges</li>
+                <li>Availability-based actions (“Add to Cart”, “Not Available”)</li>
+                <li>Improved grid layouts and component scalability</li>
+              </ul>
+            </div>
+
+            <div class="mb-6">
+              <h5 class="font-medium text-gray-800 mb-2">
+                Advanced Filters System (Mobile & Desktop)
+              </h5>
+              <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Designed and built the entire Filters UI independently</li>
+                <li>Modular JS for checkbox logic, active filters, deletion, and ranges</li>
+                <li>Async live product count via API integration</li>
+                <li>Reusable filters shared with search pages</li>
+              </ul>
+            </div>
+
+            <div class="mb-6">
+              <h5 class="font-medium text-gray-800 mb-2">
+                Multi-Level Main Menu
+              </h5>
+              <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Developed complex multi-level navigation behavior</li>
+                <li>Used event delegation for performance</li>
+                <li>Consistent UX across desktop and mobile</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 class="font-medium text-gray-800 mb-2">
+                Other Components
+              </h5>
+              <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Dropdowns, email validators, character counters</li>
+                <li>Reusable helpers and UI utilities</li>
+                <li>Responsive layout refinements across the platform</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Freelance -->
+          <div>
+            <h4 class="text-lg font-medium text-gray-900 mb-3">
+              Freelance E-Commerce Frontend Work
+            </h4>
+
+            <p class="text-sm text-gray-600 mb-2">
+              Tech: HTML, CSS, JavaScript
+            </p>
+
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+              <li>Ongoing project with continuous improvements and bug fixes</li>
+              <li>UI fixes and styling adjustments</li>
+              <li>Responsive enhancements</li>
+              <li>Minor JavaScript feature additions</li>
+              <li>Day-to-day maintenance and updates</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>

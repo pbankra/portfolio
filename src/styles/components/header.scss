@@ -10,12 +10,16 @@
 		@apply text-sm text-white;
 	}
 
-    .navbar {
+	.navbar {
 			&__link {
 				@apply text-white font-bold uppercase tracking-wide text-sm md:hover:border-b-2 md:hover:border-accent;
 				transition: color 0.3s ease-out;
 			}
-    }
+	}
+
+	.menu {
+		@apply text-white;
+	}
 
   &__on-scroll {
     @apply bg-bg1 shadow-md;
@@ -25,8 +29,11 @@
         @apply text-textBody;
      }
 		 
-		.header__logo-head {
+		.header__logo-head,
+		.menu {
 				@apply text-textMain;
 		}
+
+
   }
 }
