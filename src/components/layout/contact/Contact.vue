@@ -112,7 +112,9 @@
             name="contact"
             method="POST"
             data-netlify="true"
-            netlify-honeypot="bot-field">
+            netlify-honeypot="bot-field"
+						action="/">
+						
 
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
@@ -121,7 +123,7 @@
               <label class="block text-sm font-medium text-gray-700 mb-1">
                 Name
               </label>
-              <inpu
+              <input
                 name="name"
                 type="text"
                 required
