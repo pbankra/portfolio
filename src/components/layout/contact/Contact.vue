@@ -121,8 +121,7 @@
               <label class="block text-sm font-medium text-gray-700 mb-1">
                 Name
               </label>
-              <input
-                v-model="form.name"
+              <inpu
                 name="name"
                 type="text"
                 required
@@ -137,7 +136,6 @@
                 Email
               </label>
               <input
-                v-model="form.email"
                 name="email"
                 type="email"
                 required
@@ -152,7 +150,6 @@
                 Message
               </label>
               <textarea
-                v-model="form.message"
                 name="message"
                 rows="5"
                 required
