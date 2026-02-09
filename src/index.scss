@@ -2,8 +2,13 @@
 @use './styles/base/base';
 @use './styles/components/section';
 @use './styles/components/header';
-@use './styles/components/footer';
 @use './styles/components/card';
+
+.safe-area {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+}
 
 /* Import Tailwind directives */
 @tailwind base;

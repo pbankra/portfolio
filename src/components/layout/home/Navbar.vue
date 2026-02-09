@@ -3,7 +3,9 @@
       :class="[{ 'header__on-scroll': isScrolled }]">
     <div class="header__content flex justify-between items-center gap-x-16 sm:max-w-[640px] md:max-w-[860px] lg:max-w-[1000px] xl:max-w-[1200px] mx-auto">
       <div class="header__logo-container flex items-center gap-x-2.5 sm:gap-x-4">
-        <img class="header__logo-img w-[50px]" src="../../../assets/main-photo.png" alt="">
+        <a href="#home">
+          <img class="header__logo-img w-[50px]" src="../../../assets/main-photo.webp" alt="my-photo" loading="lazy">
+        </a>
         <div class="flex flex-col leading-none gap-y-1.5">
           <span class="header__logo-head">Parvinder Bankra</span>    
           <span class="header__logo-subhead">Frontend Developer</span>
@@ -57,6 +59,7 @@
     const isScrolled = ref(false)
   const headerRef = ref(null)
   const isMenuOpen = ref(false)
+
   const Menu = ref([
     {name:'Home',href:'#home'},
     {name:'About Me',href:'#about-me'},
@@ -64,20 +67,32 @@
     {name:'Experience',href:'#experience'},
     {name:'Contact',href:'#contact'},
   ])
+
   const toggleMenu = () => {
     isMenuOpen.value = !isMenuOpen.value
     isScrolled.value = ((window.scrollY || window.pageYOffset) > 30) || isMenuOpen.value === true
   }
+
   const scrollToSection = (href) => {
-    isMenuOpen.value = false;
-    isScrolled.value = ((window.scrollY || window.pageYOffset) > 30)
-    const section = document.querySelector(href)
-    if (!section) return
+  isMenuOpen.value = false
+
+  const section = document.querySelector(href)
+  if (!section) return
+
+  // Wait for menu to close
+  setTimeout(() => {
     const headerHeight = headerRef.value?.offsetHeight || 0
-    const gap = 8 // small offset so content isn't flush under header
-    const top = section.getBoundingClientRect().top + window.pageYOffset - headerHeight - gap
-    window.scrollTo({ top, behavior: 'smooth' })
-  }
+    const top =
+      section.getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight
+
+    window.scrollTo({
+      top,
+      behavior: 'smooth'
+    })
+  }, 150)
+}
 
   // Close menu when clicking outside the header/menu area
   const onDocumentClick = (e) => {

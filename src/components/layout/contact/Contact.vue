@@ -27,8 +27,11 @@
         <div class="space-y-5 text-gray-700">
 
             <!-- Location -->
-            <div class="flex items-center justify-center lg:justify-start gap-3">
-            <Icon icon="lucide:map-pin" width="18" class="text-accent" />
+            <div class="flex flex-col lg:flex-row
+         items-center lg:items-start
+         justify-center lg:justify-start
+         gap-2 lg:gap-3">
+            <Icon class="text-accent w-4 h-4 lg:w-[18px] lg:h-[18px]" icon="lucide:map-pin" width="18" />
             <div>
                 <span class="block text-sm text-gray-500">Location</span>
                 <span class="font-medium">NRW, Germany</span>
@@ -36,8 +39,11 @@
             </div>
 
             <!-- Email -->
-            <div class="flex items-center justify-center lg:justify-start gap-3">
-            <Icon icon="lucide:mail" width="18" class="text-accent" />
+            <div class="flex flex-col lg:flex-row
+         items-center lg:items-start
+         justify-center lg:justify-start
+         gap-2 lg:gap-3">
+            <Icon  class="text-accent w-4 h-4 lg:w-[18px] lg:h-[18px]" icon="lucide:mail" width="18" />
             <div>
                 <span class="block text-sm text-gray-500">Email</span>
                 <a
@@ -51,8 +57,11 @@
             </div>
 
             <!-- Phone -->
-            <div class="flex items-center justify-center lg:justify-start gap-3">
-            <Icon icon="lucide:phone" width="18" class="text-accent" />
+            <div class="flex flex-col lg:flex-row
+         items-center lg:items-start
+         justify-center lg:justify-start
+         gap-2 lg:gap-3">
+            <Icon class="text-accent w-4 h-4 lg:w-[18px] lg:h-[18px]" icon="lucide:phone" width="18" />
             <div>
                 <span class="block text-sm text-gray-500">Phone</span>
                 <a

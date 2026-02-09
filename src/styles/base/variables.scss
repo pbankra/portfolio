@@ -32,36 +32,8 @@ $transition-fast: 150ms ease-in-out;
 $transition-base: 300ms ease-in-out;
 $transition-slow: 500ms ease-in-out;
 
-// Breakpoints
-$breakpoint-sm: 640px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
-$breakpoint-xl: 1280px;
-$breakpoint-2xl: 1536px;
-
-// Mixins
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 @mixin flex-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == 'sm' {
-    @media (min-width: $breakpoint-sm) { @content; }
-  } @else if $breakpoint == 'md' {
-    @media (min-width: $breakpoint-md) { @content; }
-  } @else if $breakpoint == 'lg' {
-    @media (min-width: $breakpoint-lg) { @content; }
-  } @else if $breakpoint == 'xl' {
-    @media (min-width: $breakpoint-xl) { @content; }
-  } @else if $breakpoint == '2xl' {
-    @media (min-width: $breakpoint-2xl) { @content; }
-  }
 }

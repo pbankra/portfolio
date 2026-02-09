@@ -3,7 +3,7 @@
         <div class="bg-image"></div>
         <!-- <Social></Social> -->
         <HeroContent></HeroContent>
-        <svg id="home-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1400 300" preserveAspectRatio="none">
+        <svg id="home-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1200 300" preserveAspectRatio="none">
                 <path class="p-curve" d="M0,96.1c109.9,67.5,145.1,201.1,329.6,202.5S1043.2,99.5,1400,0v300H0V96.1z"></path>
             </svg>
     </section>
@@ -20,7 +20,7 @@
     to right bottom,
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.6) 
-  ), url(../../../assets/hero.jpg) center/cover no-repeat;
+  ), url(../../../assets/hero.webp) center/cover no-repeat;
     height: 100vh;
 }
 
